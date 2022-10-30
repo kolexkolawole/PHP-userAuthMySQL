@@ -2,7 +2,6 @@
 include "userauth.php";
 include_once "../config.php";
 
-
 switch(true){
     case isset($_POST['register']):
         //extract the $_POST array values for name, password and email
@@ -28,9 +27,9 @@ switch(true){
         $id = $_POST['id'];
         deleteaccount($id);
         break;
-    case isset($_GET["all"]):
-        getusers();
-        break;
+        case isset($_GET["all"]):
+            getusers();
+            break;
 }
 
-
+?>

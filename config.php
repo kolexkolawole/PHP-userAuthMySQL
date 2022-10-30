@@ -3,14 +3,17 @@
 
 function db() {
     //set your configs here
-    $host = "127.0.0.1";
+    $host = "localhost";
     $user = "root";
     $db = "zuriphp";
     $password = "";
     $conn = mysqli_connect($host, $user, $password, $db);
-    if(!$conn){
-        echo "<script> alert('Error connecting to the database') </script>";
-    }
-    return $conn;
-
+    $conn = mysqli_connect($host, $user, $password);
+if(!$conn->connect_error){
+    die("database connection failed: " . $conn->connect_error);
 }
+    echo "Connected to database successfully";
+    return $conn;
+}
+
+?>

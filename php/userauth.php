@@ -66,3 +66,4 @@ function getusers(){
      $conn = db();
      //delete user with the given id from the database
  }
+?>

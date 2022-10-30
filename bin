@@ -1,0 +1,70 @@
+<?php
+-- //include the connection
+include 'action.php'
+
+$sql = "CREATE TABLE `zuriphp`.`students` (`id` INT NOT NULL , `full_names` VARCHAR(120) NOT NULL , `country` VARCHAR(32) NOT NULL , `email` VARCHAR(60) NOT NULL , `gender` VARCHAR(10) NOT NULL , `password` VARCHAR(20) NOT NULL , PRIMARY KEY (`id`))"; VALUES
+(2, 'Nancy Vicky', 'Nigeria', 'nancy@gmail.com', 'Female', 'andy'),
+(3, 'Seyi Olufe', 'Nigeria', 'seyi@gmail.com', 'Male', '1234'),
+(4, 'Chioma Victoria', 'Nigeria', 'vicky@gmail.com', 'Female', '129323'),
+(8, 'Nfon Andrew', 'Cameroon', 'drew@gmail.com', 'Nigeria', 'tatah');
+
+if($conn){
+    if (mysqli_query)($conn, $sql)) {
+        echo "Table Students created successfully";
+    }else{
+        echo "Error creating  table: " . mysql_error($conn);
+    }
+    mysql_close($acti);
+    }
+// datzall for connecting to database. goto terminal : php <filenater> : enter
+
+
+// for establishing connection to database 
+<?php
+// connecting to database
+// define credentials
+$host = "127.0.0.1"; --//host is localhost or use server ip: 127.0.0.1 
+$user = "root";  --//server username if created
+$password = "";     --//server/phpadmin password
+$db = "zuriphp";  --//database name if already created else ignore and import it
+
+$conn = mysqli_connect($host, $user, $password);
+if(!$conn){
+    die("database connection failed: ");
+}else{
+    echo "Connected to database successfully";
+}else{
+    echo "connection to database failed";
+}
+
+goto terminal to connect : php <filename>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if($conn){
+    if (mysqli_query($conn, $sql)) {
+        echo "Database created successfully";
+    }else{
+        echo "Error creating database: " . mysql_error($conn);
+    }
+    mysql_close($conn)
+}
+?>

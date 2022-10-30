@@ -5,11 +5,10 @@ if(isset($_POST['submit'])){
     $password = $_POST['password'];//finish this
 
 loginUser($email, $password);
-
 }  
 
 function loginUser($email, $password){
-    $file = fopen("../databese/users.sql", "r");
+    $file = fopen("../users.sql", "r");
     while(($line = fgetcsv($file)) !== FALSE){
         $line = fgetcsv($file);
         if($line[1] == $email && $line[2] == $password ){

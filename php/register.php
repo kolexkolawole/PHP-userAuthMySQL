@@ -14,7 +14,7 @@ registerUser($username, $email, $password);
     'email' => $email,
     'password' => $password
    );
-   $file = fopen("../storage/users.csv", "a");
+   $file = fopen("../users.sql", "a");
    while(($line = fgetcsv($file)) !== FALSE){
     if($line[1] == $email){
         $success = true;
@@ -29,7 +29,7 @@ if ($success) {
     window.location.href="../forms/register.html";
     </script>';
 }else{
-    $file_open = fopen("../storage/users.csv", "a");
+    $file_open = fopen("../userAuthMySQL/users.sql", "a");
     $save = fputcsv($file_open, $form_data);
     fclose($file_open);
 
